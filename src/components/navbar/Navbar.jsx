@@ -19,7 +19,7 @@ const Navbar = () => {
 
           <ul className={`nav-links ${isActive ? "active" : ""}`}>
             <li>
-              <a href="home" onClick={() => setIsActive(false)}>
+              <a href="#" onClick={() => setIsActive(false)}>
                 Home
               </a>
             </li>
