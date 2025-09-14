@@ -76,7 +76,7 @@ const projects = [
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 data-aos="fade-down">My Projects</h2>
+        <h2 >My Projects</h2>
         <p className="subtitle" data-aos="fade-down" data-aos-delay="100">
           Here are some of my recent works showcasing my skills in frontend
           development.
