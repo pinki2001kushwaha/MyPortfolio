@@ -1,0 +1,137 @@
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+  color: #fff;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left Text Section */
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 span {
+  background: linear-gradient(45deg, #4ecdc4, #00b4db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #64ffda;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: linear-gradient(45deg, #4ecdc4, #00b4db);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 180, 219, 0.4);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #4ecdc4;
+  color: #4ecdc4;
+}
+
+.btn.secondary:hover {
+  background: rgba(78, 205, 196, 0.1);
+  color: #00b4db;
+}
+
+/* Right Image Section */
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 180, 219, 0.3);
+  transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+.scroll-down {
+  margin-top: 40px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4ecdc4;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+/* Button bounce karega */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+}

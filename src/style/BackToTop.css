@@ -1,0 +1,21 @@
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #00f5d4, #06d6a0);
+  color: #0a192f;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}

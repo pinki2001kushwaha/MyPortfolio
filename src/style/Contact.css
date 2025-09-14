@@ -1,0 +1,215 @@
+.contact {
+  padding: 100px 20px;
+  background: #112240;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 180, 219, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #4ecdc4, #00b4db);
+  border-radius: 2px;
+}
+
+.contact h2 span {
+  background: linear-gradient(45deg, #4ecdc4, #00b4db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 180, 219, 0.2),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(0, 180, 219, 0.2);
+  border-color: rgba(0, 180, 219, 0.4);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.btn {
+  display: inline-block;
+  padding: 16px 35px;
+  background: linear-gradient(45deg, #4ecdc4, #00b4db);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 15px rgba(0, 180, 219, 0.3);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 180, 219, 0.5);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 15px;
+  }
+  
+  .contact h2 {
+    font-size: 2.2rem;
+  }
+  
+  .contact-form {
+    padding: 25px;
+  }
+  
+  .btn {
+    padding: 14px 30px;
+  }
+}
+/* Popup Overlay */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.6); /* semi-transparent dark */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Box */
+.popup-content {
+  background: #ffffff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+  color: #10b981; /* green success */
+}
+
+.popup-content p {
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

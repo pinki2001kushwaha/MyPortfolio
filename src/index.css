@@ -1,0 +1,28 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff5722;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e64a19;
+}

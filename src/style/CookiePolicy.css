@@ -1,0 +1,121 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cookie-banner a {
+  color: #00f5d4;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px dashed #00f5d4;
+  transition: all 0.3s ease;
+}
+
+.cookie-banner a:hover {
+  color: #06d6a0;
+  border-bottom: 1px solid #06d6a0;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.accept-btn,
+.reject-btn {
+  border: none;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.accept-btn {
+  background: linear-gradient(135deg, #00f5d4, #06d6a0);
+  color: #0a192f;
+  box-shadow: 0 4px 12px rgba(0, 245, 212, 0.4);
+}
+
+.accept-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 245, 212, 0.55);
+}
+
+.reject-btn {
+  background: linear-gradient(135deg, #ff4e50, #ff7676);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 78, 80, 0.4);
+}
+
+.reject-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 78, 80, 0.55);
+}
+
+/* 📱 Responsive (Mobile < 768px) */
+@media screen and (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+    bottom: 0;
+    /* left: 0; */
+    transform: none;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    height: auto;
+    gap: 15px;
+  }
+
+  .cookie-banner p {
+    font-size: 14px;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cookie-buttons button {
+    width: 100%;
+    margin: 0;
+  }
+}
