@@ -23,7 +23,7 @@ const projects = [
     desc: "A multi-module e-commerce platform for Admin, Retailers, and Customers.",
     img: "https://img.freepik.com/free-vector/e-commerce-app-concept-illustration_114360-8242.jpg?w=826",
     details: "Designed and developed an e-commerce platform with modules for Admin, Retailer, and Customer. Features include product management, role-based routing, and stock management. My role included frontend UI, API integration, and backend API/authentication.",
-    technologies: ["React.js", "Next.js", "Node.js", "MySQL", "AWS"],
+    technologies: ["React.js", "Css", "Node.js", "MySQL", "AWS"],
     liveLink: "#"
   },
   {
