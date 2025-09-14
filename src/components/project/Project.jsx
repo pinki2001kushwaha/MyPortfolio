@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../../style/Project.css";
-import Portfolio from '../../assets/Portfolio.png';
 import livon from '../../assets/livon.png';
 
 
