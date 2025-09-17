@@ -28,12 +28,17 @@ const Navbar = () => {
                 About
               </a>
             </li>
+             <li>
+              <a href="#skills" onClick={() => setIsActive(false)}>
+                Skills
+              </a>
+            </li>
             <li>
               <a href="#projects" onClick={() => setIsActive(false)}>
                 Projects
               </a>
             </li>
-            {/* Contact button inside li */}
+          
             <li>
               <a
                 href="#contact"

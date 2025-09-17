@@ -8,6 +8,7 @@ import Contact from "./components/contant/Contact";
 import "./App.css"; // Loader CSS import
 import CookieConsent from "./components/cookie/CookiePolicy";
 import BackToTop from "./components/backtotop/BackToTop";
+import Skills from "./components/skills/Skills";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Skills/>
       <Project />
       <Contact />
       <Footer />

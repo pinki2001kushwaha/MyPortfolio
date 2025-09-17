@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../style/Hero.css";
-import file from "../../assets/files.png";
+import file from "../../assets/dp.png";
 
 function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
